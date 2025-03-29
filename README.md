@@ -110,6 +110,8 @@ For the selection of components we need to take into account that the component 
 #### Purchase
 Also, we restrict our purchase to a unique electronic shop.
 
+![BOM](./Documentation/Images/Helpers/BOM.png)
+
 > [!NOTE]
 > Before buying anything we recommend to be sure that taxes are dealed by the shop. 
 
