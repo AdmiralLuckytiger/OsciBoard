@@ -1,5 +1,9 @@
 # __OsciBoard__: Wein Bridge Oscillator
 
+<p align=center>
+  <img width="108" height="108" src="./Documentation/Images/Logo.svg">
+</p>
+
 This repository documents the design, build and test process of a Wein Bridge Oscillator.
 
 Consequently, in this archive you could find the steps that have been followed to achieve the objective of the proyect. Futhermore, aditional comments and thoughts will be added, as the work has followed an iterative process of improvement. 
