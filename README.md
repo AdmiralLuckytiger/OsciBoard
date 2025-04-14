@@ -42,7 +42,7 @@ Our solution is built around a Wien Bridge Oscillator with adjustable gain. The 
 
 ---
 
-#### 🔎 Subcircuit 1: Frequency Measurement Path
+### 🔎 Subcircuit 1: Frequency Measurement Path
 
 This branch of the circuit is responsible for preparing the signal so that its frequency can be measured digitally: 
 
