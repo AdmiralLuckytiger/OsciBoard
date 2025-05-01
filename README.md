@@ -170,16 +170,6 @@ In the following images, you can see the board being tested.
 
 ![Lab Results](./Documentation/Images/Helpers/Results.png)
 
-Absolutely! Here's the expanded version adapted to fit naturally within a `README.md` file. It uses markdown-friendly formatting and concise, informative language appropriate for technical documentation:
-
----
-
-Here's a refined and professional version of your `README.md` section, with clearer phrasing, corrected grammar, and consistent formatting. I've also expanded slightly for clarity while keeping it concise:
-
----
-
-Your section is looking great—well-structured and informative. Below is a refined version with improved grammar, technical clarity, and formatting. I've also enhanced the tone slightly to match the professional style of a well-crafted `README.md`.
-
 ---
 
 ## 🧠 Digital Circuit Overview
