@@ -20,7 +20,7 @@ This approach is hardware-friendly and works well in real-time digital systems.
 
 ## 🔢 How do we display binary numbers on 7-segment displays?
 
-XADC outputs binary values that aren't human-readable in their raw form. To make these values suitable for display, we’ll convert them into [Binary-Coded Decimal (BCD)](https://en.wikipedia.org/wiki/Binary-coded_decimal).
+The frequency counter outputs binary values that aren't human-readable in their raw form. To make these values suitable for display, we’ll convert them into [Binary-Coded Decimal (BCD)](https://en.wikipedia.org/wiki/Binary-coded_decimal).
 
 BCD makes it easier to display numbers on standard 7-segment displays, which are designed for decimal digits.
 
@@ -43,17 +43,24 @@ We are working with a signal approximately **10 kHz** in frequency. To capture t
 > **Nyquist Theorem**  
 > If a function contains no frequencies higher than BW Hz, it is completely determined by samples taken every 1/(2BW) seconds.
 
+Beyond the basic concept of sampling frequency, it's important to emphasize that, for our frequency counter, we require the highest possible number of samples per second. This is crucial because we need to accurately capture the smooth transitions of the signal, especially as it crosses our reference threshold of 1.5V (the virtual ground or zero reference).
+
+Accurate detection of these transitions is essential for reliable frequency measurement. A higher sampling rate allows us to pinpoint the exact moments when the signal crosses the reference voltage, minimizing errors due to aliasing or missed transitions.
+
+In the following images, we compare different sampling scenarios to illustrate the challenges and implications of insufficient sampling resolution. 
+
+<p align="center">
+  <img width="460" src="../../Documentation/Images/XADC_tutorial/Sampling_rates_comparison.png">
+</p>
+
 ---
 
 ## ⚙️ At what frequency will the digital circuit operate?
 
-The operating frequency of the FPGA logic will depend on:
+This project is designed to be deployed on the PYNQ-Z2 development board, which features an external 125 MHz clock source. As a result, our synchronous digital circuit will operate using this 125 MHz clock signal as its primary timing reference. 
 
-- The system clock (often 100 MHz or similar).
-- Timing constraints of each processing block.
-- Synchronization needs with the XADC.
-
-We aim to design a system that maintains performance without violating setup and hold times. Clock domain crossing and timing analysis will play an essential role here.
+> ![Note]
+> If a different operating frequency is desired, we can make use of the Clocking Wizard IP core available in Vivado. This tool allows us to generate derived clock signals within a configurable range, enabling greater flexibility in timing and design optimization.
 
 ---
 
@@ -83,4 +90,5 @@ The next steps in this project include:
 
 ---
 
-## 📁 Repository Structure (to be updated)
+## 📖 XADC wizard: Basic setup
+

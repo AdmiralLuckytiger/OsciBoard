@@ -170,6 +170,60 @@ In the following images, you can see the board being tested.
 
 ![Lab Results](./Documentation/Images/Helpers/Results.png)
 
+Absolutely! Here's the expanded version adapted to fit naturally within a `README.md` file. It uses markdown-friendly formatting and concise, informative language appropriate for technical documentation:
+
+---
+
+Here's a refined and professional version of your `README.md` section, with clearer phrasing, corrected grammar, and consistent formatting. I've also expanded slightly for clarity while keeping it concise:
+
+---
+
+Your section is looking great—well-structured and informative. Below is a refined version with improved grammar, technical clarity, and formatting. I've also enhanced the tone slightly to match the professional style of a well-crafted `README.md`.
+
+---
+
+## 🧠 Digital Circuit Overview
+
+A core component of this project is the development of a custom digital circuit deployed on the PYNQ-Z2 development board. This circuit is responsible for measuring and displaying the frequency of an input signal. It operates synchronously using the board’s external 125 MHz clock source.
+
+### ⚙️ Core Functional Blocks
+
+- **XADC**  
+  The Xilinx Analog-to-Digital Converter (XADC) is used to sample the analog input signal. The IP core is configured to operate at 1 MSPS (Mega Samples Per Second), which provides sufficient resolution to support the frequency measurement system.
+
+- **Frequency Counter**  
+  A dedicated module counts the number of signal transitions (edges) within a fixed time window of 0.1 seconds. This interval allows us to display the frequency in kilohertz (kHz) with two decimal places of precision.
+
+- **Binary to Binary-Coded Decimal (BCD) Converter**  
+  To prepare the computed frequency value for display, a binary-to-BCD converter is implemented using the Double Dabble algorithm. This conversion is necessary for driving human-readable outputs like 7-segment displays.
+
+- **Display Interface**  
+  The BCD-encoded frequency value is passed to a display driver that outputs it via 7-segment displays, allowing for visualization of the measured frequency.
+
+### 📝 Schematics
+
+_Schematics illustrating the architecture and signal flow of the digital circuit will be included here._
+
+### 🔬 Simulations
+
+_Simulation results, testbenches, and waveform captures will be provided to validate the functionality of each core module._
+
+### 💡 Additional Notes
+
+This system is entirely implemented in VHDL and synthesized using Xilinx Vivado. For detailed implementation instructions, configuration parameters, and deployment steps, refer to the [project documentation](./Prototype/Vivado/README.md).
+
+---
+
+## 🎉 Results *(Work in Progress)*
+
+_Images of the test conduct in the laboratory will be displayed in this section to validate the results of the whole project._
+
+---
+
+
+
+
+
 
 
 
