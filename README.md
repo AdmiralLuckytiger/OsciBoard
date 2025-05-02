@@ -190,13 +190,41 @@ A core component of this project is the development of a custom digital circuit 
 - **Display Interface**  
   The BCD-encoded frequency value is passed to a display driver that outputs it via 7-segment displays, allowing for visualization of the measured frequency.
 
-### 📝 Schematics
+---
 
-_Schematics illustrating the architecture and signal flow of the digital circuit will be included here._
+### 📊 Simulation Results
 
-### 🔬 Simulations
+Below are visual results from the simulations of each key subcircuit in the system. These illustrate the signal's journey from digitization to binary-coded decimal (BCD) conversion.
 
-_Simulation results, testbenches, and waveform captures will be provided to validate the functionality of each core module._
+#### 🔍 XADC (Analog-to-Digital Conversion)
+
+This image shows the output of the XADC operating at 1 MSPS with 100 samples per point. It represents the digitized version of the input analog signal.
+
+<p align="center">
+  <img width="460" src="./Documentation/Images/XADC_tutorial/1MSPS-100SPP.png">
+</p>
+
+#### 📟 Frequency Counter
+
+These simulations depict the frequency counter circuit in action. The first image shows the primary frequency counting logic, while the second provides a complementary perspective of the counter’s operation.
+
+<p align="center">
+  <img width="460" src="./Documentation/Images/Digital_circuit/Frequency_counter.png">
+</p>
+
+<p align="center">
+  <img width="460" src="./Documentation/Images/Digital_circuit/Frequency_counter_B.png">
+</p>
+
+#### 🔢 Binary to BCD Conversion
+
+Finally, the image below demonstrates the output of the binary to BCD converter. This is the final step in the digital signal processing pipeline, converting the raw binary frequency value into a human-readable decimal format.
+
+<p align="center">
+  <img width="460" src="./Documentation/Images/Digital_circuit/Main_circuit_simulation.png">
+</p>
+
+---
 
 ### 💡 Additional Notes
 

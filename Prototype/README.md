@@ -1,12 +1,13 @@
-# Prototype files
-In this folder you should find the main prototype files that using the KiCad 8 tool allow you to generate the corresponding gerber files to send to the maufacturer. 
+### 📁 Project Files Overview
 
-```
-\Kicad
-    \_  Oscilador.kicad_pro
-        # Wrapper of the Kicad proyect
-    |_  Oscilador.kicad_sch
-        # Schematics of the proyect
-    |_  Oscilador.kicad_pcb
-        # Layout of the proyect
-```
+In this folder, you will find the primary prototype files created using **KiCad 8**. These files can be used to generate the necessary **Gerber files** required for PCB manufacturing.
+
+Additionally, the folder includes:
+
+* 💡 **Digital circuit design source files** – Schematics and layouts for the digital components of the project.
+* 🧪 **Testbenches** – Simulation files used to verify the behavior and performance of individual subcircuits.
+
+These resources collectively support both the hardware prototyping and digital logic development aspects of the project.
+
+---
+

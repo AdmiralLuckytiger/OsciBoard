@@ -90,5 +90,3 @@ The next steps in this project include:
 
 ---
 
-## 📖 XADC wizard: Basic setup
-
