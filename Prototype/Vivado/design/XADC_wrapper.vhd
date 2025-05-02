@@ -39,11 +39,10 @@ entity XADC_wrapper is
         vauxp1: in std_logic;
         vauxn1: in std_logic;
         ---
-        output: out std_logic_vector(13 downto 0)
-        --tens: out std_logic_vector(3 downto 0);
-        --unit: out std_logic_vector(3 downto 0);
-        --tenths: out std_logic_vector(3 downto 0);
-        --hundreths: out std_logic_vector(3 downto 0)
+        tens: out std_logic_vector(3 downto 0);
+        ones: out std_logic_vector(3 downto 0);
+        tenths: out std_logic_vector(3 downto 0);
+        hundreths: out std_logic_vector(3 downto 0)
      );
 end XADC_wrapper;
 
@@ -107,6 +106,19 @@ end component;
 
 --- 
 
+component double_dabble is
+  Port (
+    clk         : in std_logic; 
+    reset       : in std_logic;
+    --
+    input       : in std_logic_vector(13 downto 0);
+    --
+    tens        : out std_logic_vector(3 downto 0);
+    ones        : out std_logic_vector(3 downto 0);
+    tenths      : out std_logic_vector(3 downto 0);
+    hundreths   : out std_logic_vector(3 downto 0)  
+   );
+end component;
 
 --- 
 
@@ -162,8 +174,19 @@ frequency_counter_inst : Frequency_counter
         clk => clk, 
         reset => reset,
         input => dig,
-        output => output
+        output => bin
     ); 
+    
+bin2bcd: double_dabble
+    PORT MAP (
+        clk => clk, 
+        reset => reset,
+        input => bin,
+        tens  => tens,
+        ones  => ones,
+        tenths => tenths,
+        hundreths   => hundreths     
+    );
       
     
 end Behavioral;

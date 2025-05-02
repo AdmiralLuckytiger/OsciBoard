@@ -45,11 +45,10 @@ component XADC_wrapper
         vauxp1: in std_logic;
         vauxn1: in std_logic;
         ---
-        output: out std_logic_vector(13 downto 0)
-        --tens: out std_logic_vector(3 downto 0);
-        --unit: out std_logic_vector(3 downto 0);
-        --tenths: out std_logic_vector(3 downto 0);
-        --hundreths: out std_logic_vector(3 downto 0)
+        tens: out std_logic_vector(3 downto 0);
+        ones: out std_logic_vector(3 downto 0);
+        tenths: out std_logic_vector(3 downto 0);
+        hundreths: out std_logic_vector(3 downto 0)
      );
 end component;
 
@@ -59,9 +58,7 @@ constant CLK_PERIOD : time := 8 ns;
 
 signal clk, reset, vauxp1, vauxn1: std_logic;
 
-signal output: std_logic_vector(13 downto 0);
-
---signal tens, unit, tenths, hundreths: std_logic_vector(3 downto 0);
+signal tens, ones, tenths, hundreths: std_logic_vector(3 downto 0);
 
 begin
 
@@ -71,11 +68,10 @@ dut: XADC_wrapper
         reset => reset,
         vauxp1 => vauxp1,
         vauxn1 => vauxn1,
-        output => output
-        --tens => tens,
-        --unit => unit,
-        --tenths => tenths,
-        --hundreths => hundreths
+        tens => tens,
+        ones => ones,
+        tenths => tenths,
+        hundreths => hundreths
      );
     
 clk_stimuli : process
