@@ -59,7 +59,7 @@ In the following images, we compare different sampling scenarios to illustrate t
 
 This project is designed to be deployed on the PYNQ-Z2 development board, which features an external 125 MHz clock source. As a result, our synchronous digital circuit will operate using this 125 MHz clock signal as its primary timing reference. 
 
-> ![Note]
+> [!Note]
 > If a different operating frequency is desired, we can make use of the Clocking Wizard IP core available in Vivado. This tool allows us to generate derived clock signals within a configurable range, enabling greater flexibility in timing and design optimization.
 
 ---
