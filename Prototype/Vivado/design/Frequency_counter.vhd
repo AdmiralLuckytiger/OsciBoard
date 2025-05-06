@@ -54,7 +54,6 @@ signal cnt_r: std_logic;
 
 signal cnt: unsigned(24 downto 0);
 
-
 signal reg: std_logic_vector(13 downto 0);
 signal en: std_logic;
 
