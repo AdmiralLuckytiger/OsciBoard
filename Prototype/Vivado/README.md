@@ -16,6 +16,9 @@ A straightforward and effective method is to use a [frequency counter](https://a
 
 This approach is hardware-friendly and works well in real-time digital systems.
 
+> [!WARNING]
+> When using the XADC, be careful with the pins you select. Take the time to thoroughly check the schematics of your specific board and consult the official constraints file. Sometimes, pin names can be misleading.
+
 ---
 
 ## 🔢 How do we display binary numbers on 7-segment displays?
